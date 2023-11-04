@@ -4,6 +4,21 @@
   <groupId>com.tailwindsw</groupId>
   <artifactId>gs-java-training</artifactId>
   <packaging>jar</packaging>
+   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.11.0</version>
+          <configuration>
+            <source>11</source>
+            <target>11</target>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
   <version>1.0</version>
   <name>gs-java-training</name>
   <url>http://maven.apache.org</url>
@@ -32,6 +47,13 @@
       <artifactId>log4j-core</artifactId>
       <version>2.17.1</version>
     </dependency>
+
+    <dependency>
+    <groupId>com.kony.dbp</groupId>
+    <artifactId>DBPFramework</artifactId>
+    <version>2022.04.00</version>
+    </dependency>
+
 
   </dependencies>
 
