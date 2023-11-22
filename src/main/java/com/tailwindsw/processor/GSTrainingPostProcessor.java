@@ -7,7 +7,8 @@ import com.konylabs.middleware.dataobject.Result;
 
 public class GSTrainingPostProcessor implements DataPostProcessor2 {
     public Object execute(Result result, DataControllerRequest req, DataControllerResponse res) {
-        if (req.getParameter("name") != null) {
+        String name = req.getParameter("name");
+        if (name != null && !name.isEmpty()) {
             return result;
         }
         result.addParam("name", "Default");
